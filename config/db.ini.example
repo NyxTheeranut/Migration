@@ -1,0 +1,9 @@
+# Copy to config/db.ini (gitignored) and fill in real values.
+# encoded_password is base64:  printf '%s' 'your-password' | base64
+
+[dwh_prod]
+ip = 10.0.0.10
+port = 5480
+username = etl_user
+encoded_password = Y2hhbmdlLW1l
+database = DATAWAREHOUSE

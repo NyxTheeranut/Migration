@@ -1,0 +1,8 @@
+# Real connection details
+config/db.ini
+
+# macOS / Python
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
