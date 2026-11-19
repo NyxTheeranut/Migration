@@ -79,10 +79,3 @@ chmod 600 config/db.ini
 export TEAMS_WEBHOOK_JOB_FAIL="https://..."    # optional; without it alerts go to the log
 # point Airflow's dags_folder (or a DAG bundle) at dags/migrated
 ```
-
-## A note on the password
-
-The password in `config/db.ini` is base64-encoded. That keeps it out of the DAG
-code and out of git, but base64 is **not encryption**: anyone who can read the
-file can decode it, so the file is protected with `chmod 600`. The next step
-would be an Airflow Connection backed by a secrets manager.
