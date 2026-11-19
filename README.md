@@ -68,14 +68,3 @@ config/
 docs/
   migration_pattern.md
 ```
-
-## Run it
-
-You need Airflow 3.x and the Netezza client (`nzodbcsql`).
-
-```bash
-cp config/db.ini.example config/db.ini       # fill in the real connection
-chmod 600 config/db.ini
-export TEAMS_WEBHOOK_JOB_FAIL="https://..."    # optional; without it alerts go to the log
-# point Airflow's dags_folder (or a DAG bundle) at dags/migrated
-```
